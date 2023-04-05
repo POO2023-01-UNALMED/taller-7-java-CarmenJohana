@@ -1,73 +1,59 @@
 package comunicacion;
-public class Tesis extends Escrito{
 
-	private String idea;
-	private static String[] argumentos;
-	private String conclusion;
-	private String referencias;
+public class Libro extends Escrito {
+
+	private String co_autor;
+	private String editorial;
+	private String edicion;
 	private String interpretacion;
-
-	public Tesis(String origen, String titulo, String autor, int paginas,String idea, String[]argumentos, String conclusion, String referencias, String interpretacion) {
-		super(origen,titulo,autor,paginas);
-		this.idea=idea;
-		Tesis.argumentos=argumentos;
-		this.conclusion=conclusion;
-		this.referencias=referencias;
+	public Libro(String origen, String titulo, String autor, int paginas, String co_autor, String editorial, String edicion, String interpretacion) {
+		super(origen,titulo, autor, paginas);
+		this.co_autor=co_autor;
+		this.editorial=editorial;
+		this.edicion=edicion;
 		this.interpretacion=interpretacion;
 	}
 
-	public String getIdea() {
-		return idea;
+	public int palabrasTotales(int palabrasPagina) {
+		return palabrasPagina*this.getPaginas()*2;
 	}
 
-	public void setIdea(String idea) {
-		this.idea = idea;
+	public String getCo_autor() {
+		return co_autor;
 	}
-
-	public static String[] getArgumentos() {
-		return argumentos;
+	public void setCo_autor(String co_autor) {
+		this.co_autor = co_autor;
 	}
-
-	public static void setArgumentos(String[]argumentos) {
-		Tesis.argumentos = argumentos;
+	public String getEditorial() {
+		return editorial;
 	}
-
-	public String getConclusion() {
-		return conclusion;
+	public void setEditorial(String editorial) {
+		this.editorial = editorial;
 	}
-
-	public void setConclusion(String conclusion) {
-		this.conclusion = conclusion;
+	public String getEdicion() {
+		return edicion;
 	}
-
-	public String getReferencias() {
-		return referencias;
+	public void setEdicion(String edicion) {
+		this.edicion = edicion;
 	}
-
-	public void setReferencias(String referencias) {
-		this.referencias = referencias;
-	}
-
 	public String getInterpretacion() {
 		return interpretacion;
 	}
-
 	public void setInterpretacion(String interpretacion) {
 		this.interpretacion = interpretacion;
 	}
 
-	public int palabrasTotales(int palabrasPagina) {
-		return this.getPaginas()*palabrasPagina*5;
+	public String toString() {
+
+		String cadena=String.format("%s\n%s\n%s\n%s\n%s\n%s\n%s", this.getOrigen(), this.getTitulo(), this.getAutor(), this.getPaginas(),co_autor,editorial,edicion);
+		return cadena;
+
 	}
 
 	public String interpretacion() {
 
 		return interpretacion;
-
 	}
 
-	public String toString() {
-		String cadena=String.format("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s", this.getOrigen(), this.getTitulo(), this.getAutor(), this.getPaginas(),idea, argumentos.length,conclusion,referencias);
-		return cadena;
-	}
+
 }
