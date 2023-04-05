@@ -1,4 +1,4 @@
-import comunicacion.Escrito;
+package comunicacion;
 public class Tesis extends Escrito{
 
 	private String idea;
