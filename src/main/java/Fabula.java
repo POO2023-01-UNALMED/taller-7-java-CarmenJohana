@@ -1,4 +1,3 @@
-package p1;
 public class Fabula extends Escrito {
 	private String ensenanza;
 	private String interpretacion;
@@ -7,8 +6,6 @@ public class Fabula extends Escrito {
 		this.ensenanza=ensenanza;
 		this.interpretacion=interpretacion;
 	}
-
-
 
 	public String getEnsenanza() {
 		return ensenanza;
@@ -48,7 +45,4 @@ public class Fabula extends Escrito {
 		String cadena=String.format("%s\n%s\n%s\n%s\n%s", this.getOrigen(), this.getTitulo(), this.getAutor(), this.getPaginas(), ensenanza);
 		return cadena;
 	}
-
-
-
 }
