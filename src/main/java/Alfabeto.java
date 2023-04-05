@@ -1,4 +1,3 @@
-
 public class Alfabeto extends Pictograma{
 
 	private static String[]letras;

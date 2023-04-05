@@ -1,4 +1,3 @@
-
 public class Tesis extends Escrito{
 
 	private String idea;
